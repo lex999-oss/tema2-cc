@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "0f9174d4-f8c4-4445-a9fc-2fa9225ff351",
+		"name": "tema2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insert new employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"Cristian Nenciu\",\n        \"email\": \"nenciu.cristian@email.com\"\n    },\n    {\n        \"name\": \"Paul Moisescu\",\n        \"email\": \"moisescu.paul@email.com\"\n    },\n    {\n        \"name\": \"Adrian Simion\",\n        \"email\": \"simion.adrian@email.com\"\n    },\n    {\n        \"name\": \"Roxana Apreotesei\",\n        \"email\": \"apreotesei.roxana@email.com\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/employee",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/employee",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert new employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"Alexandru Craciun\",\n\"email\": \"alexandru.craciun@email.com\",\n\"isManager\": true,\n\"peers\": [\n    \"604aa062bdc5181e00544794\",\n    \"604aa062bdc5181e00544795\",\n    \"604aa063bdc5181e00544796\"\n]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/employee",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employee"
+					]
+				},
+				"description": "POST a new employee to API"
+			},
+			"response": []
+		},
+		{
+			"name": "GET one employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/employee/604aa2b9cff5c91f4d098fb5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employee",
+						"604aa2b9cff5c91f4d098fb5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"Alexandru Craciun\",\n\"email\": \"alexandru.craciun@email.com\",\n\"isManager\": true,\n\"peers\": [\n    \"604aa062bdc5181e00544794\",\n    \"604aa062bdc5181e00544795\"\n]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/employee/604aa2b9cff5c91f4d098fb5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employee",
+						"604aa2b9cff5c91f4d098fb5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/employee/604aa063bdc5181e00544796",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employee",
+						"604aa063bdc5181e00544796"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test\",\n    \"email\": \"test@email.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/employee",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
